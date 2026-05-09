@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Logs | Cybersecurity Lab</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-inner">
+      <h1>Cybersecurity Password Lab</h1>
+      <nav>
+        <a href="index.html">Analyzer</a>
+        <a href="generator.html">Generator</a>
+        <a href="logs.html" class="active">Logs</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Password Test Logs</h2>
+      <p>View recent password test submissions (masked for privacy).</p>
+
+      <div class="filters">
+        <label>
+          Risk filter:
+          <select id="riskFilter">
+            <option value="">All</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+            <option value="critical">Critical</option>
+          </select>
+        </label>
+        <button id="clearLogsBtn" class="btn" style="margin-left:0.75rem;">Clear logs</button>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Masked Password</th>
+              <th>Score</th>
+              <th>Risk</th>
+              <th>Issues</th>
+            </tr>
+          </thead>
+          <tbody id="logsTableBody">
+            <tr>
+              <td colspan="5" class="muted">Loading logs...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <small>&copy; <span id="yearSpan"></span> Cybersecurity Password Lab</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/logs.js"></script>
+</body>
+</html>
+
+

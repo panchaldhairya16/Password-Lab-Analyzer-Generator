@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | Cybersecurity Lab</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-inner">
+      <h1>Cybersecurity Password Lab</h1>
+      <nav>
+        <a href="index.html">Analyzer</a>
+        <a href="generator.html">Generator</a>
+        <a href="logs.html">Logs</a>
+        <a href="about.html" class="active">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>About This Lab</h2>
+      <p>
+        This web-based Cybersecurity Password Lab is designed as an educational tool to explore
+        password strength, common weaknesses, and secure password generation practices.
+      </p>
+      <p>
+        The analyzer uses AI-style heuristic logic implemented in JavaScript to detect weak patterns such as:
+      </p>
+      <ul>
+        <li>Short length and low entropy</li>
+        <li>Repeated or sequential characters (e.g., <code>aaaaaa</code>, <code>123456</code>, <code>qwerty</code>)</li>
+        <li>Keyboard patterns and common words</li>
+        <li>Simple substitutions (e.g., <code>P@ssw0rd</code>)</li>
+      </ul>
+      <p>
+        All password tests are stored locally in your browser storage with masked values so that the
+        original password is not kept in clear text. The logs view aggregates statistics and risk metrics.
+      </p>
+      <p class="muted">
+        Disclaimer: This is a demo / educational project and should not be used as a sole security
+        assessment tool for production systems.
+      </p>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <small>&copy; <span id="yearSpan"></span> Cybersecurity Password Lab</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/common.js"></script>
+</body>
+</html>
+
+

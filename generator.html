@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Password Generator | Cybersecurity Lab</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-inner">
+      <h1>Cybersecurity Password Lab</h1>
+      <nav>
+        <a href="index.html">Analyzer</a>
+        <a href="generator.html" class="active">Generator</a>
+        <a href="logs.html">Logs</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Strong Password Generator</h2>
+      <p>Generate strong, random passwords with customizable options.</p>
+
+      <div class="grid-2">
+        <div>
+          <label for="lengthInput" class="field-label">Length</label>
+          <input type="number" id="lengthInput" class="text-input" value="16" min="8" max="64" />
+        </div>
+        <div>
+          <label class="field-label">Character sets</label>
+          <label><input type="checkbox" id="useLower" checked /> Lowercase</label><br />
+          <label><input type="checkbox" id="useUpper" checked /> Uppercase</label><br />
+          <label><input type="checkbox" id="useNumbers" checked /> Numbers</label><br />
+          <label><input type="checkbox" id="useSymbols" checked /> Symbols</label>
+        </div>
+      </div>
+
+      <button id="generateBtn" class="btn primary">Generate Password</button>
+
+      <div id="generatedSection" class="generated hidden">
+        <label for="generatedPassword" class="field-label">Generated password</label>
+        <div class="field-inline">
+          <input type="text" id="generatedPassword" class="text-input" readonly />
+          <button id="copyBtn" class="btn">Copy</button>
+        </div>
+        <p id="generatorNote" class="muted">
+          Generated passwords are not stored unless you explicitly test them in the analyzer.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <small>&copy; <span id="yearSpan"></span> Cybersecurity Password Lab</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/generator.js"></script>
+</body>
+</html>
+
+

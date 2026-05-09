@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Password Analyzer | Cybersecurity Lab</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-inner">
+      <h1>Password Lab</h1>
+      <nav>
+        <a href="index.html" class="active">Analyzer</a>
+        <a href="generator.html">Generator</a>
+        <a href="logs.html">Logs</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Password Strength Analyzer</h2>
+      <p>Test your password strength and learn how to improve it.</p>
+
+      <label for="passwordInput" class="field-label">Enter password to analyze</label>
+      <input type="password" id="passwordInput" class="text-input" placeholder="Enter password" />
+
+      <div class="field-inline">
+        <label>
+          <input type="checkbox" id="showPasswordToggle" />
+          Show password
+        </label>
+      </div>
+
+      <button id="analyzeBtn" class="btn primary">Analyze Password</button>
+
+      <section id="analysisResult" class="analysis hidden">
+        <h3>Analysis Result</h3>
+        <div class="strength-indicator">
+          <span>Strength:</span>
+          <span id="strengthLabel" class="strength-label">N/A</span>
+        </div>
+        <div class="strength-bar">
+          <div id="strengthBarFill"></div>
+        </div>
+        <ul id="issuesList" class="issues-list"></ul>
+        <p id="overallRisk" class="overall-risk"></p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <small>&copy; <span id="yearSpan"></span> Cybersecurity Password Lab</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/analyzer.js"></script>
+</body>
+</html>
+
+
